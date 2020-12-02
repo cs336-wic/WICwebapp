@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'joinus', component: JoinUsComponent },
   { path: 'contact', component: ContactComponent },
   // otherwise redirect to home
-  { path: '***', redirectTo: ''},
+  { path: '**', redirectTo: ''},
 ];
 
 @NgModule({
