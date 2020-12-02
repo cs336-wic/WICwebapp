@@ -38,6 +38,7 @@ input {
     height: 40px;
     margin-bottom: 5%;
     background-color: rgb(242, 242, 242);
+    border-radius: 5px;
 }
 textarea{
     display: inline;
@@ -45,6 +46,7 @@ textarea{
     height: 100px;
     margin-bottom: 5%;
     background-color: rgb(242, 242, 242);
+    border-radius: 5px;
 }
 .submit{
     width: 50%;
@@ -57,4 +59,9 @@ label{
 button{
     width: 30%;
     height: 40px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(230, 230, 230);
 }

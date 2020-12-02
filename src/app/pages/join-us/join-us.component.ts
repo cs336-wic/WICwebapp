@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {EmailJSResponseStatus} from 'emailjs-com';
 import emailjs from 'emailjs-com';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-join-us',
@@ -9,7 +11,7 @@ import emailjs from 'emailjs-com';
 })
 export class JoinUsComponent implements OnInit {
 
-    // emails are sent to a member on leadership, defualt is currently (eac33)
+  // emails are sent to a member on leadership, defualt is currently (eac33)
   // code from https://www.emailjs.com/docs/examples/angular/
   public sendJoinEmail(e: Event) {
     e.preventDefault();
