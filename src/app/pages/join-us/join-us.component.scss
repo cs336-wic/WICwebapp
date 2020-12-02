@@ -1,0 +1,29 @@
+.submit-button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.form-container {
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  flex: 50%;
+  margin-left: 25%;
+}
+
+.comment {
+  height: 200px;
+}
+
+input {
+  display: inline-flex;
+  width: 40%;
+  height: 40px;
+  background-color: rgb(242, 242, 242);
+}
+
+.issue_comment {
+  width: 35%;
+}
