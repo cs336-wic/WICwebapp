@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  .text-container{
+    //border: 1px solid black;
+    margin-right: 3%;
+    flex: 50%;
+  }
+  .text-container h4{
+    text-align: left;
+    color: black;
+    font-size: 25px;
+  }
+  .text-container p{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+  }

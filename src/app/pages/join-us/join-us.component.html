@@ -1,26 +1,22 @@
-<!-- <p>join-us works!</p> -->
+<div class="container">
+  <div class="text-container">
+      <h4>Join Us</h4>
+      <p>We're always looking for new memebers. <br> Feel free to sign up here, and you will be<br>added to our email list.<br><br>
+      Or email us directly:</p>
+      <a class="icon-buttons" href="mailto:womencompute@calvin.edu" target="_blank"><i class="fa fa-envelope-square" aria-hidden="true" style="font-size:50px;"></i></a>
+  </div>
 
-<div class="form-container">
-  <legend>Sign up</legend>
-  <form class="contact-form" (submit)="sendJoinEmail($event)">
-    <label>Name *</label><br />
-    <input type="text" name="name" /><br />
-    <label>Email Address *</label><br />
-    <input type="email" name="user_email" /><br />
-    <label>Major *</label><br />
-    <input type="major" name="major" /><br />
-    <label>Comment</label><br />
-    <input
-      class="comment"
-      type="comment"
-      name="comment_box"
-      placeholder="Tell us a little about yourself..."
-    /><br />
-    <button type="submit" class="submit-button">Submit</button>
-  </form>
-  <h5 class="issue_comment">
-    <br /><br /><br />
-    **Email us via the contact us page or through the WIC email if you are
-    having any problems!
-  </h5>
+  <div class="form-container">
+      <form class="contact-form"(submit)="sendJoinEmail($event)">
+          <label>Name *</label>
+          <input type="text" name="name"><br>
+          <label>Email Address *</label>
+          <input type="email" name="user_email"><br>
+          <label>Major *</label>
+          <input type="text" name="major"><br>
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us something about yourself..."></textarea>
+          <button type="submit" class="submit-button">Submit</button>
+      </form>
+  </div>
 </div>

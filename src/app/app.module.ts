@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { JoinUsComponent } from './pages/join-us/join-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     HomeComponent,
     LeadershipComponent,
     JoinUsComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
