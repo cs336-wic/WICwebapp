@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import emailjs from 'emailjs-com';
 import {EmailJSResponseStatus} from 'emailjs-com';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,12 @@ import {EmailJSResponseStatus} from 'emailjs-com';
 })
 export class ContactComponent implements OnInit {
 
+  myform:FormGroup = new FormGroup({
+    inputname: new FormControl(),
+    inputemail: new FormControl(),
+    inputmessage: new FormControl(),
+  })
+
   // emails are sent to a member on leadership, defualt is currently (eac33)
   // code from https://www.emailjs.com/docs/examples/angular/
   public sendEmail(e: Event) {
@@ -16,10 +23,24 @@ export class ContactComponent implements OnInit {
     emailjs.sendForm('service_06ar58h', 'template_i3vy0yf', e.target as HTMLFormElement, 'user_1AZStlEMFg8RVtvHU1dSB')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
+        // call function to reset form AFTER email is sent
+        this.resetForm();
       }, (error) => {
         console.log(error.text);
       });
   }
+
+    // fucntion to clear fields when "submit button is pressed"
+    private resetForm(): void {
+      if (this.myform.valid) {
+        console.log("form submitted!")
+        this.myform.reset();
+        console.log("Reset form!");
+      }
+      else{
+        console.log("didn't work!!!!!")
+      }
+    }
 
   constructor() { }
 
