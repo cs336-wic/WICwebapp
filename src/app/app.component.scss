@@ -1,6 +1,28 @@
-li {
-  display: inline;
-}
 .navbar-header {
   display: inline-flex;
+  font-size: 20px;
+  //border-bottom: 2px solid black;
+}
+.navbar-brand{
+  color: rgb(100,100,100);
+}
+.navbar-brand:hover {
+  color: rgb(0,0,0);
+}
+.navbar.navbar-expand-lg.navbar-light{
+  margin-top: 1.5vw;
+}
+a {
+  display: inline;
+  font-size: 20px;
+  color: rgb(100,100,100);
+}
+a:hover {
+  color: rgb(0,0,0);
+  background-color: transparent;
+}
+.container-fluid{
+  border-bottom: 4px solid black;
+  width:75%;
+  padding-bottom: 15px;
 }
