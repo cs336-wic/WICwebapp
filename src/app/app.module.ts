@@ -9,6 +9,7 @@ import { JoinUsComponent } from './pages/join-us/join-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EventsComponent } from './pages/events/events.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LeadershipComponent,
     JoinUsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
