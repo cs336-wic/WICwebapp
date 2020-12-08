@@ -1,0 +1,19 @@
+mat-card {
+  margin: 20;
+  width: max-content;
+  // background-color: beige;
+}
+mat-card-header {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+mat-card-title {
+  font-family: inherit;
+}
+
+img {
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
