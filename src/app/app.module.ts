@@ -11,6 +11,11 @@ import { AboutComponent } from './pages/about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './pages/events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeadershipCardComponent } from './leadership-card/leadership-card.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { firebaseConfig } from './credentials';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -21,15 +26,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JoinUsComponent,
     ContactComponent,
     AboutComponent,
-    EventsComponent
+    EventsComponent,
+    LeadershipCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
+  exports: [
+    MatCardModule,
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
