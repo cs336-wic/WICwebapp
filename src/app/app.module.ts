@@ -18,6 +18,19 @@ import { firebaseConfig } from "./credentials";
 import { MatCardModule } from "@angular/material/card";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { FullCalendarModule } from "@fullcalendar/angular"; // the main connector. must go first
+import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin
+import interactionPlugin from "@fullcalendar/interaction"; // a plugin
+import listPlugin from "@fullcalendar/list";
+import timeGridPlugin from "@fullcalendar/timegrid";
+
+FullCalendarModule.registerPlugins([
+  // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin,
+  listPlugin,
+  timeGridPlugin,
+]);
 
 @NgModule({
   declarations: [
@@ -41,6 +54,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     MatCardModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    BrowserModule,
+    FullCalendarModule,
   ],
   exports: [MatCardModule],
 
