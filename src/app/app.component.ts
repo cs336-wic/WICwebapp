@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject, Renderer2 } from "@angular/core";
-import { DOCUMENT } from "@angular/common";
+import { Component, HostBinding } from "@angular/core";
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-root",
@@ -7,28 +7,16 @@ import { DOCUMENT } from "@angular/common";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  theme: Theme = "light-theme";
+  toggleControl = new FormControl(false);
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
-  ) {}
+  @HostBinding("class") className = "";
 
-  ngOnInit() {
-    this.initializeTheme();
+  constructor() {}
+
+  ngOnInit(): void {
+    this.toggleControl.valueChanges.subscribe((darkMode) => {
+      const darkClassName = "darkMode";
+      this.className = darkMode ? darkClassName : "";
+    });
   }
-
-  switchTheme() {
-    this.document.body.classList.replace(
-      this.theme,
-      this.theme === "light-theme"
-        ? (this.theme = "dark-theme")
-        : (this.theme = "light-theme")
-    );
-  }
-
-  initializeTheme = (): void =>
-    this.renderer.addClass(this.document.body, this.theme);
 }
-
-export type Theme = "light-theme" | "dark-theme";
