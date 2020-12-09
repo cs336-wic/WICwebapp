@@ -1,13 +1,19 @@
+* {
+  --bg: white;
+  --fonts: gray;
+  --hoveringfont: black;
+}
+
 .navbar-header {
   display: inline-flex;
   font-size: 20px;
   //border-bottom: 2px solid black;
 }
 .navbar-brand {
-  color: rgb(100, 100, 100);
+  color: var(--fonts);
 }
 .navbar-brand:hover {
-  color: rgb(0, 0, 0);
+  color: var(--hoveringfont);
 }
 .navbar.navbar-expand-lg.navbar-light {
   margin-top: 1.5vw;
@@ -15,7 +21,7 @@
 a {
   display: inline;
   font-size: 20px;
-  color: rgb(100, 100, 100);
+  color: var(--fonts);
 }
 a:hover {
   color: rgb(0, 0, 0);
@@ -31,7 +37,7 @@ button {
   margin: 10px;
   margin-top: 13px;
   border: none;
-  background-color: white;
+  background-color: var(--bg);
 }
 
 .headerdivider {
@@ -41,4 +47,8 @@ button {
   height: 30px;
   margin-top: 10px;
   display: flex-end;
+}
+mat-slide-toggle {
+  position: absolute;
+  top: 13px;
 }

@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, Inject, Renderer2 } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -6,17 +7,28 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "WICwebapp";
+  theme: Theme = "light-theme";
 
-  setDark = false;
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
+  ) {}
 
-  constructor() {}
+  ngOnInit() {
+    this.initializeTheme();
+  }
 
-  ngOnInit(): void {}
+  switchTheme() {
+    this.document.body.classList.replace(
+      this.theme,
+      this.theme === "light-theme"
+        ? (this.theme = "dark-theme")
+        : (this.theme = "light-theme")
+    );
+  }
 
-//   onChangeToggle() {
-//     this.setDark = !this.setDark;
-//     this.mode.emit(this.setDark);
-//     console.log(this.setDark);
-//   }
-// }
+  initializeTheme = (): void =>
+    this.renderer.addClass(this.document.body, this.theme);
+}
+
+export type Theme = "light-theme" | "dark-theme";

@@ -1,7 +1,11 @@
-mat-card {
+.my-card {
   margin: 20;
   width: max-content;
+  border-radius: 10px;
   // background-color: beige;
+  box-shadow: 2px 2px 9px 6px #ccc;
+
+  margin-left: 130px;
 }
 mat-card-header {
   font-family: Georgia, "Times New Roman", Times, serif;
