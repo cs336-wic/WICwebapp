@@ -17,6 +17,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { firebaseConfig } from "./credentials";
 import { MatCardModule } from "@angular/material/card";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -31,14 +32,15 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatCardModule,
     AngularFireModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    MatCardModule,
     MatSlideToggleModule,
+    MatToolbarModule,
   ],
   exports: [MatCardModule],
 

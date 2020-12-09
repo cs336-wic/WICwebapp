@@ -33,7 +33,7 @@ a:hover {
   padding-bottom: 15px;
 }
 
-button {
+i {
   margin: 10px;
   margin-top: 13px;
   border: none;
@@ -50,5 +50,6 @@ button {
 }
 mat-slide-toggle {
   position: absolute;
-  top: 13px;
+  background-color: none;
+  margin-top: 14px;
 }
