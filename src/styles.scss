@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.light_theme {
+  --bg: white;
+  --fonts: gray;
+  --hoveringfont: black;
+}
+
+.dark_theme {
+  --darkbg: darkgray;
+}

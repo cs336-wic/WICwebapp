@@ -17,7 +17,10 @@
     <base href="/" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      [ngClass]="{ 'dark-theme-mode': isDarkTheme }"
+    >
       <div class="container-fluid">
         <div class="navbar-header">
           <img src="../assets/logo2.png" width="50px" height="50px" />
@@ -29,6 +32,35 @@
           <li><a routerLink="/leadership">Leadership</a></li>
           <li><a routerLink="/joinus">Join Us</a></li>
           <li><a routerLink="/contact">Contact</a></li>
+          <li>
+            <div class="headerdivider"></div>
+          </li>
+          <li>
+            <button
+              class="fa fa-adjust"
+              aria-hidden="true"
+              style="font-size: 25px"
+              [(ngModel)]="isDarkTheme"
+              labelPosition="before"
+            ></button>
+
+            <!-- <button
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()"
+              *ngIf="isHandset$ | async"
+            >
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span style="flex: auto"></span>
+            <mat-slide-toggle
+              [(ngModel)]="isDarkTheme"
+              labelPosition="before"
+              (change)="storeThemeSelection()"
+            >
+            </mat-slide-toggle> -->
+          </li>
         </ul>
       </div>
     </nav>
