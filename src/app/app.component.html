@@ -19,7 +19,6 @@
   <body>
     <nav
       class="navbar navbar-expand-lg navbar-light"
-      [ngClass]="{ 'dark-theme-mode': isDarkTheme }"
     >
       <div class="container-fluid">
         <div class="navbar-header">
@@ -40,8 +39,6 @@
               class="fa fa-adjust"
               aria-hidden="true"
               style="font-size: 25px"
-              [(ngModel)]="isDarkTheme"
-              labelPosition="before"
             ></button>
 
             <!-- <button
