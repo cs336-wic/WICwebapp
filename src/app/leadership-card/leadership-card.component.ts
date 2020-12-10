@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
-// export interface firestoreRec { bio: string, name: string, position: string, year: string, picture: string, email: string };
+import { Component, OnInit } from "@angular/core";
+import {
+  AngularFirestoreModule,
+  AngularFirestore,
+} from "@angular/fire/firestore";
+import { LeadershipService } from "../service/leadership.service";
 
 @Component({
-  selector: 'app-leadership-card',
-  templateUrl: './leadership-card.component.html',
-  styleUrls: ['./leadership-card.component.scss']
+  selector: "app-leadership-card",
+  templateUrl: "./leadership-card.component.html",
+  styleUrls: ["./leadership-card.component.scss"],
 })
 export class LeadershipCardComponent implements OnInit {
+  constructor(public leadersService: LeadershipService) {}
 
-  // public leadership: firestoreRec[];
-
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.leadersService.get_pres();
   }
-
 }

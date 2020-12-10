@@ -23,6 +23,7 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin
 import interactionPlugin from "@fullcalendar/interaction"; // a plugin
 import listPlugin from "@fullcalendar/list";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import { LeadershipService } from "./service/leadership.service";
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -58,8 +59,7 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
   ],
   exports: [MatCardModule],
-
-  providers: [],
+  providers: [LeadershipService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
