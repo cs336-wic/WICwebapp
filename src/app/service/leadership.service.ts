@@ -18,7 +18,6 @@ export interface firestoreRec {
   providedIn: "root",
 })
 export class LeadershipService {
-  // public items: firestoreRec[];
   constructor(private db: AngularFirestore) {
     // this.db.collection("People").add({
     //   bio: "Hello, i'm the ...",
@@ -37,31 +36,38 @@ export class LeadershipService {
   public picture: string = "gadg";
   public email: string = "ag";
 
+  public items = [];
+
   async get_pres() {
     const res = await this.db
-      .doc<firestoreRec>("/People/bnKJYAxYAvap2RzuWaDS")
+      .doc<firestoreRec>("/People/0LyiPKt52ZVAme1jX3We")
       .ref.get();
-    console.log(res.data());
+    // console.log(res.data());
+    this.items.push(res.data());
   }
 
   async get_vice() {
     const res = await this.db
       .doc<firestoreRec>("/People/pkpKVdPzztZRDkFzKDtG")
       .ref.get();
-    console.log(res.data());
+    // console.log(res.data());
+    this.items.push(res.data());
   }
 
   async get_vice2() {
     const res = await this.db
       .doc<firestoreRec>("/People/uh8ONxTBf2spt9kZKegC")
       .ref.get();
-    console.log(res.data());
+    // console.log(res.data());
+    this.items.push(res.data());
   }
 
   async get_coord() {
     const res = await this.db
       .doc<firestoreRec>("/People/pkpKVdPzztZRDkFzKDtG")
       .ref.get();
-    console.log(res.data());
+    // console.log(res.data());
+    this.items.push(res.data());
+    console.log(this.items);
   }
 }

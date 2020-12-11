@@ -1,10 +1,16 @@
-<mat-card class="my-card">
+<mat-card *ngFor="let item of items" class="my-card">
   <mat-card-header>
-    <mat-card-title> President </mat-card-title>
+    <mat-card-title> {{ item.name }} </mat-card-title>
 
-    <mat-card-subtitle> LS </mat-card-subtitle>
-    <img mat-card-image />
+    <mat-card-subtitle> {{ item.position }} </mat-card-subtitle>
+    <!-- <mat-icon class="account_circle"></mat-icon> -->
+    <div class="icons">
+      <a href="{{ item.linkedin }}" class="fa fa-linkedin"></a>
+      <a href="{{ item.email }}" class="fa fa-envelope-square"></a>
+    </div>
   </mat-card-header>
-  <img mat-card-image src="../assets/1.jpg" alt="Photo of Lauren" />
-  <mat-card-content> </mat-card-content>
+  <img mat-card-image src="{{ item.picture }}" alt="Profile Photo" />
+  <mat-card-content>
+    {{ item.year }} <br /><br />{{ item.bio }}</mat-card-content
+  >
 </mat-card>

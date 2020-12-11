@@ -1,22 +1,36 @@
+* {
+  border: 1px solid blue;
+}
 .my-card {
-  margin: 20;
+  margin: 20px;
   width: max-content;
   border-radius: 10px;
   box-shadow: 2px 2px 9px 6px #ccc;
-
-  margin-left: 130px;
+  display: inline-block;
+  justify-content: space-around;
 }
 mat-card-header {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-mat-card-title {
-  font-family: inherit;
+mat-card-content {
+  display: inline-flex;
+  margin: 10px;
+  overflow-wrap: normal;
+  width: 400px;
 }
-
 img {
   width: 200px;
   justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+.icons {
+  font-size: 25px;
+  display: inline-block;
+  overflow: hidden;
+  margin-left: auto;
+}
+a {
+  margin: 5px;
 }
