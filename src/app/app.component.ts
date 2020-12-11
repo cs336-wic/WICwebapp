@@ -7,6 +7,7 @@ import { FormControl } from "@angular/forms";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
+
   toggleControl = new FormControl(false);
 
   @HostBinding("class") className = "";

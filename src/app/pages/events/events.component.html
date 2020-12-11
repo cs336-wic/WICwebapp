@@ -25,10 +25,15 @@
       <p>View our calendar of upcoming events! Feel free to contact us with any questions.</p>
       <br>
       <h4>Mentorship Program</h4>
-      <p>Collge is not only a critical time for education, but for choosing career paths, and we want our women
-        to know the good and the bad of working in the industry.
+      <p>College is not only a critical time for education, but for choosing career paths, and we want our women
+        to be well prepared for when they enter the industry. If you are interested, please reach out through our "Contact" page.
+        <!-- documentaiton used https://www.labnol.org/internet/free-file-hosting-github/29092/ -->
+        <a href="https://github.com/cs336-wic/pdfs/blob/master/WIC%20Mentorship%20Program%20Brochure.pdf?raw=true">Download Brochure</a>
       </p>
-      <!-- <button>Download PDF</button> -->
     </div>
   </div>
 </div>
+<pdf-viewer [src]="pdfSrc"
+  [render-text]="true"
+  style="display: block;"
+  ></pdf-viewer>

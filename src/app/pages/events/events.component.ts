@@ -1,6 +1,7 @@
 import { TransitiveCompileNgModuleMetadata } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { CalendarOptions } from "@fullcalendar/angular"; // useful for typechecking
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @Component({
   selector: "app-events",
@@ -11,6 +12,9 @@ export class EventsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  //pdfSrc="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  pdfSrc="https://github.com/cs336-wic/pdfs/blob/master/WIC%20Mentorship%20Program%20Brochure.pdf?raw=true";
 
   // code referenced from https://www.emailjs.com/docs/examples/angular/
 
