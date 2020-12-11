@@ -1,17 +1,55 @@
-* {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.calendar_size {
-  width: 70%;
-  margin: 0 auto;
-}
+// * {
+//   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+// }
+// .calendar_size {
+//   width: 70%;
+//   margin: 0 auto;
+// }
 
-button {
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  left: 375px;
-  background-color: #2c3640;
-  color: whitesmoke;
-  font-size: 15px;
+// button {
+//   padding: 5px;
+//   border-radius: 5px;
+//   position: absolute;
+//   left: 375px;
+//   background-color: #2c3640;
+//   color: whitesmoke;
+//   font-size: 15px;
+// }
+
+.google-calendar {
+  flex: 70%;
+  padding-top: 2%;
+  width: 60%;
+  margin: auto;
+  align-content: center;
+  align-self: center;
+  //border-style: solid;
+}
+.resources {
+  border-left: 3px solid black;
+  //border-style: solid;
+  flex: 30%;
+  margin-left: 5%;
+}
+.container{
+  display: flex;
+  min-width: 80%;
+  margin-top: 3%;
+  //width: auto;
+  //border-style: solid;
+}
+.text-container{
+  //border: 1px solid black;
+  margin-left: 10%;
+  flex: 50%;
+}
+.text-container h4{
+  text-align: left;
+  color: black;
+  font-size: 25px;
+}
+.text-container p{
+  text-align: left;
+  color: black;
+  font-size: 18px;
 }
