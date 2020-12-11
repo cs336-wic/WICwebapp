@@ -1,29 +1,37 @@
 * {
   border: 1px solid blue;
 }
+
+.margin {
+  margin-left: 200px;
+  margin-right: 200px;
+}
 .my-card {
-  margin: 20px;
+  margin: 30px;
   width: max-content;
   border-radius: 10px;
   box-shadow: 2px 2px 9px 6px #ccc;
   display: inline-block;
-  justify-content: space-around;
-}
-mat-card-header {
   font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 20px;
+
+  float: left;
 }
+
 mat-card-content {
-  display: inline-flex;
+  display: inline-block;
   margin: 10px;
   overflow-wrap: normal;
   width: 400px;
+  height: 280px;
 }
-img {
-  width: 200px;
-  justify-content: center;
-  align-items: center;
+.img {
+  width: 180px;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
 }
 .icons {
   font-size: 25px;
@@ -33,4 +41,13 @@ img {
 }
 a {
   margin: 5px;
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.804);
+  border-radius: 4px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
