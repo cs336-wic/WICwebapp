@@ -15,5 +15,8 @@ export class LeadershipCardComponent implements OnInit {
 
   async ngOnInit() {
     this.leadersService.get_pres();
+    this.leadersService.get_vice();
+    this.leadersService.get_vice2();
+    this.leadersService.get_coord();
   }
 }

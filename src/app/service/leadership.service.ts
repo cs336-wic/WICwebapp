@@ -18,8 +18,17 @@ export interface firestoreRec {
   providedIn: "root",
 })
 export class LeadershipService {
-  // public items: ;
-  constructor(private db: AngularFirestore) {}
+  // public items: firestoreRec[];
+  constructor(private db: AngularFirestore) {
+    // this.db.collection("People").add({
+    //   bio: "Hello, i'm the ...",
+    //   name: "Sinai Park",
+    //   position: "vice president",
+    //   year: "junior",
+    //   picture: ".../assets/logo.png",
+    //   email: "sp46@students.calvin.edu",
+    // });
+  }
 
   public bio: string = "bio";
   public name: string = "df";
@@ -29,14 +38,30 @@ export class LeadershipService {
   public email: string = "ag";
 
   async get_pres() {
-    console.log("test1");
     const res = await this.db
       .doc<firestoreRec>("/People/bnKJYAxYAvap2RzuWaDS")
       .ref.get();
     console.log(res.data());
+  }
 
-    console.log("test2");
-    // this.items = this.res;
-    // this.items = this.db.doc<firestoreRec>.valueChanges().subscribe((res) => {
+  async get_vice() {
+    const res = await this.db
+      .doc<firestoreRec>("/People/pkpKVdPzztZRDkFzKDtG")
+      .ref.get();
+    console.log(res.data());
+  }
+
+  async get_vice2() {
+    const res = await this.db
+      .doc<firestoreRec>("/People/uh8ONxTBf2spt9kZKegC")
+      .ref.get();
+    console.log(res.data());
+  }
+
+  async get_coord() {
+    const res = await this.db
+      .doc<firestoreRec>("/People/pkpKVdPzztZRDkFzKDtG")
+      .ref.get();
+    console.log(res.data());
   }
 }
