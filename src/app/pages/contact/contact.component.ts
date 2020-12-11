@@ -10,6 +10,7 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  // documentation used https://angular.io/api/forms/FormGroup
   myform:FormGroup = new FormGroup({
     inputname: new FormControl(),
     inputemail: new FormControl(),
@@ -17,7 +18,7 @@ export class ContactComponent implements OnInit {
   })
 
   // emails are sent to a member on leadership, defualt is currently (eac33)
-  // code from https://www.emailjs.com/docs/examples/angular/
+  // documentation used https://www.emailjs.com/docs/examples/angular/
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_06ar58h', 'template_i3vy0yf', e.target as HTMLFormElement, 'user_1AZStlEMFg8RVtvHU1dSB')
@@ -31,6 +32,7 @@ export class ContactComponent implements OnInit {
   }
 
     // fucntion to clear fields when "submit button is pressed"
+    // documentation used https://angular.io/api/forms/FormGroup
     private resetForm(): void {
       if (this.myform.valid) {
         console.log("form submitted!")

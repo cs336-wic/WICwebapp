@@ -11,6 +11,7 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
 })
 export class JoinUsComponent implements OnInit {
 
+  // documentation used https://angular.io/api/forms/FormGroup
   myform:FormGroup = new FormGroup({
     inputname: new FormControl(),
     inputemail: new FormControl(),
@@ -34,6 +35,7 @@ export class JoinUsComponent implements OnInit {
   }
 
   // fucntion to clear fields when "submit button is pressed"
+  // documentation used https://angular.io/api/forms/FormGroup
   private resetForm(): void {
     if (this.myform.valid) {
       console.log("form submitted!")
