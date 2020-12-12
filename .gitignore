@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# node_modules folder
+node_modules/**/*
+
+# macOS
+.DS_Store
