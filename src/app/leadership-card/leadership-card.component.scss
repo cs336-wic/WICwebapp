@@ -1,5 +1,5 @@
 * {
-  border: 1px solid blue;
+  border: 0px solid blue;
 }
 
 .margin {
@@ -14,7 +14,7 @@
   display: inline-block;
   font-family: Georgia, "Times New Roman", Times, serif;
   border-radius: 20px;
-
+  // documentation https://stackoverflow.com/questions/21672346/css-positioning-two-elements-next-to-each-other/21672491
   float: left;
 }
 

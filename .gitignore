@@ -63,10 +63,10 @@ node_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env 
+
+#macOS
+.DS_Store
 
 # node_modules folder
 node_modules/**/*
-
-# macOS
-.DS_Store
