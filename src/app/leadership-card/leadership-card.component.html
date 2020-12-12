@@ -1,0 +1,20 @@
+<div class="margin">
+  <mat-card *ngFor="let item of items" class="my-card">
+    <mat-card-header>
+      <mat-card-title> {{ item.position }} </mat-card-title>
+      <mat-card-subtitle> {{ item.year }} </mat-card-subtitle>
+      <!-- <mat-icon class="account_circle"></mat-icon> -->
+      <div class="icons">
+        <a href="{{ item.linkedin }}" class="fa fa-linkedin"></a>
+        <a href="{{ item.email }}" class="fa fa-envelope-square"></a>
+      </div>
+    </mat-card-header>
+    <div class="img">
+      <img mat-card-image src="{{ item.picture }}" alt="Profile Photo" />
+    </div>
+    <mat-card-content>
+      <p class="name">{{ item.name }}</p>
+      <br />{{ item.bio }}
+    </mat-card-content>
+  </mat-card>
+</div>
