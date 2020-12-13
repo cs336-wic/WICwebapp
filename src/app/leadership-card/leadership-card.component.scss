@@ -1,7 +1,6 @@
 * {
   border: 0px solid blue;
 }
-
 .margin {
   margin-left: 200px;
   margin-right: 200px;
@@ -50,4 +49,11 @@ a {
   font-weight: bold;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+.toggle {
+  position: absolute;
+  right: 240px;
+  top: 40px;
+  margin-top: 0px;
+  margin-left: auto;
 }
