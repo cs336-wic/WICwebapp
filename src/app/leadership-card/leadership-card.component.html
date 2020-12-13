@@ -1,12 +1,19 @@
 <div class="margin">
+  <div class="toggle">
+    <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+    </mat-slide-toggle>
+  </div>
   <mat-card *ngFor="let item of items" class="my-card">
     <mat-card-header>
       <mat-card-title> {{ item.position }} </mat-card-title>
       <mat-card-subtitle> {{ item.year }} </mat-card-subtitle>
-      <!-- <mat-icon class="account_circle"></mat-icon> -->
       <div class="icons">
-        <a href="{{ item.linkedin }}" target="_blank" class="fa fa-linkedin"></a>
-        <a href="{{ item.email }}" class="fa fa-envelope-square"></a>
+        <a
+          href="{{ item.linkedin }}"
+          target="_blank"
+          class="fa fa-linkedin"
+        ></a>
+        <a href="mailto:{{ item.email }}" class="fa fa-envelope-square"></a>
       </div>
     </mat-card-header>
     <div class="img">

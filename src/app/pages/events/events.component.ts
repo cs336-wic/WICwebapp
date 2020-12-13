@@ -13,7 +13,6 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {}
 
   // code referenced from https://www.emailjs.com/docs/examples/angular/
-
   calendarOptions: CalendarOptions = {
     initialView: "dayGridMonth",
     dateClick: this.handleDateClick.bind(this), // bind is important!
@@ -48,9 +47,5 @@ export class EventsComponent implements OnInit {
 
   handleDateClick(arg) {
     alert("date click! " + arg.dateStr);
-  }
-
-  toggleWeekends() {
-    this.calendarOptions.weekends = !this.calendarOptions.weekends; // toggle the boolean!
   }
 }
