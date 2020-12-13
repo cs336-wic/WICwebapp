@@ -24,7 +24,7 @@ export class LeadershipCardComponent implements OnInit {
   toggleControl = new FormControl(false);
 
   @HostBinding("class") className = "";
-
+  //array to store items
   public items = [];
 
   constructor(public db: AngularFirestore) {}
@@ -50,7 +50,7 @@ export class LeadershipCardComponent implements OnInit {
       .doc<firestoreRec>("/People/g6edHl2176VFnbDom9EV")
       .ref.get();
     this.items.push(res4.data());
-    console.log(this.items);
+    // console.log(this.items);
 
     //referenced zoaibkhan.com/blog/angular-material-dark-mode-in-3-steps/
     this.toggleControl.valueChanges.subscribe((darkMode) => {

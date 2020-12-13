@@ -3,29 +3,39 @@
     <div class="navbar-header">
       <img src="../assets/logo2.png" width="50px" height="50px" />
       <a class="navbar-brand" href="#">Women in Computing</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a routerLink="/about">About</a></li>
-      <li>
-        <div class="headerdivider"></div>
-      </li>
-      <li><a routerLink="/events">Events</a></li>
-      <li>
-        <div class="headerdivider"></div>
-      </li>
-      <li><a routerLink="/leadership">Leadership</a></li>
-      <li>
-        <div class="headerdivider"></div>
-      </li>
-      <li><a routerLink="/joinus">Join Us</a></li>
-      <li>
-        <div class="headerdivider"></div>
-      </li>
-      <li><a routerLink="/contact">Contact</a></li>
-      <li>
-        <div class="headerdivider"></div>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="nav navbar-nav" id="margin_nav">
+        <li><a routerLink="/about">About</a></li>
+        <li>
+          <div class="headerdivider"></div>
+        </li>
+        <li><a routerLink="/events">Events</a></li>
+        <li>
+          <div class="headerdivider"></div>
+        </li>
+        <li><a routerLink="/leadership">Leadership</a></li>
+        <li>
+          <div class="headerdivider"></div>
+        </li>
+        <li><a routerLink="/joinus">Join Us</a></li>
+        <li>
+          <div class="headerdivider"></div>
+        </li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li>
+          <div class="headerdivider"></div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 <router-outlet></router-outlet>
