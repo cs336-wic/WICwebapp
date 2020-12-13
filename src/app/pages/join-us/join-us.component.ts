@@ -11,6 +11,8 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
 })
 export class JoinUsComponent implements OnInit {
 
+  // create new form
+  // ducumentation used https://angular.io/guide/forms
   myform:FormGroup = new FormGroup({
     inputname: new FormControl(),
     inputemail: new FormControl(),
@@ -20,7 +22,8 @@ export class JoinUsComponent implements OnInit {
 
 
   // emails are sent to a member on leadership, defualt is currently (eac33)
-  // code from https://www.emailjs.com/docs/examples/angular/
+  // email service hosted by email.js
+  // documentation used https://www.emailjs.com/docs/examples/angular/
   public sendJoinEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_06ar58h', 'template_t55kfxa', e.target as HTMLFormElement, 'user_1AZStlEMFg8RVtvHU1dSB')
@@ -33,7 +36,8 @@ export class JoinUsComponent implements OnInit {
       });
   }
 
-  // fucntion to clear fields when "submit button is pressed"
+  // fucntion to clear form fields when "submit button is pressed"
+  // ducumentation used https://angular.io/guide/forms
   private resetForm(): void {
     if (this.myform.valid) {
       console.log("form submitted!")
