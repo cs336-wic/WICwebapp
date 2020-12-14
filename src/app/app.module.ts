@@ -23,6 +23,9 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin
 import interactionPlugin from "@fullcalendar/interaction"; // a plugin
 import listPlugin from "@fullcalendar/list";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import { TreasurerCardComponent } from './treasurer-card/treasurer-card.component';
+import { VpCardComponent } from './vp-card/vp-card.component';
+import { MentorshipCoordCardComponent } from './mentorship-coord-card/mentorship-coord-card.component';
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -42,6 +45,9 @@ FullCalendarModule.registerPlugins([
     AboutComponent,
     EventsComponent,
     LeadershipCardComponent,
+    TreasurerCardComponent,
+    VpCardComponent,
+    MentorshipCoordCardComponent,
   ],
   imports: [
     BrowserModule,

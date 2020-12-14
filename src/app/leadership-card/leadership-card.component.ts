@@ -5,15 +5,7 @@ import {
 } from "@angular/fire/firestore";
 import { FormControl } from "@angular/forms";
 
-export interface firestoreRec {
-  bio: string;
-  name: string;
-  position: string;
-  year: string;
-  picture: string;
-  email: string;
-  linkedin: string;
-}
+import { firestoreRec } from '../firestoreRec';
 
 @Component({
   selector: "app-leadership-card",
@@ -27,7 +19,7 @@ export class LeadershipCardComponent implements OnInit {
   //array to store items
   public items = [];
 
-  constructor(public db: AngularFirestore) {}
+  constructor(public db: AngularFirestore) { }
 
   async ngOnInit() {
     //referenced prof norman's notes on email
@@ -35,21 +27,6 @@ export class LeadershipCardComponent implements OnInit {
       .doc<firestoreRec>("/People/0LyiPKt52ZVAme1jX3We")
       .ref.get();
     this.items.push(res.data());
-
-    const res2 = await this.db
-      .doc<firestoreRec>("/People/pkpKVdPzztZRDkFzKDtG")
-      .ref.get();
-    this.items.push(res2.data());
-
-    const res3 = await this.db
-      .doc<firestoreRec>("/People/uh8ONxTBf2spt9kZKegC")
-      .ref.get();
-    this.items.push(res3.data());
-
-    const res4 = await this.db
-      .doc<firestoreRec>("/People/g6edHl2176VFnbDom9EV")
-      .ref.get();
-    this.items.push(res4.data());
     // console.log(this.items);
 
     //referenced zoaibkhan.com/blog/angular-material-dark-mode-in-3-steps/

@@ -24,7 +24,6 @@ mat-card-content {
   width: 400px;
   height: 280px;
 }
-
 .img {
   width: 180px;
   justify-content: flex-start;
@@ -33,14 +32,12 @@ mat-card-content {
   margin-right: auto;
   margin-top: 0px;
 }
-
 .icons {
   font-size: 25px;
   display: inline-block;
   overflow: hidden;
   margin-left: auto;
 }
-
 a {
   margin: 5px;
   padding: 2px;
@@ -52,12 +49,4 @@ a {
   font-weight: bold;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.toggle {
-  position: absolute;
-  right: 240px;
-  top: 40px;
-  margin-top: 0px;
-  margin-left: auto;
 }
