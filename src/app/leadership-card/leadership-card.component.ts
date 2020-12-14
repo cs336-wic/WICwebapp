@@ -4,16 +4,7 @@ import {
   AngularFirestore,
 } from "@angular/fire/firestore";
 import { FormControl } from "@angular/forms";
-
-export interface firestoreRec {
-  bio: string;
-  name: string;
-  position: string;
-  year: string;
-  picture: string;
-  email: string;
-  linkedin: string;
-}
+import { firestoreRec } from '../firestoreRec';
 
 @Component({
   selector: "app-leadership-card",
@@ -21,13 +12,14 @@ export interface firestoreRec {
   styleUrls: ["./leadership-card.component.scss"],
 })
 export class LeadershipCardComponent implements OnInit {
+  //for dark mode
   toggleControl = new FormControl(false);
-
   @HostBinding("class") className = "";
+
   //array to store items
   public items = [];
 
-  constructor(public db: AngularFirestore) {}
+  constructor(public db: AngularFirestore) { }
 
   async ngOnInit() {
     //referenced prof norman's notes on email
