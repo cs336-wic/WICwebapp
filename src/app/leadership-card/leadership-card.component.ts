@@ -14,14 +14,13 @@ import { firestoreRec } from '../firestoreRec';
 export class LeadershipCardComponent implements OnInit {
   //for dark mode
   toggleControl = new FormControl(false);
-
   @HostBinding("class") className = "";
+
   //array to store items
   public items = [];
 
   constructor(public db: AngularFirestore) { }
 
-  //was able to make separate card component files, but unsure how to implement darkmode from the same toggle
   async ngOnInit() {
     //referenced prof norman's notes on email
     const res = await this.db
