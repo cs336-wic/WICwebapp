@@ -4,7 +4,7 @@ import {
   AngularFirestore,
 } from "@angular/fire/firestore";
 import { FormControl } from "@angular/forms";
-import { firestoreRec } from '../firestoreRec';
+import { firestoreRec } from "../firestoreRec";
 
 @Component({
   selector: "app-leadership-card",
@@ -13,13 +13,13 @@ import { firestoreRec } from '../firestoreRec';
 })
 export class LeadershipCardComponent implements OnInit {
   //for dark mode
-  toggleControl = new FormControl(false);
+  toggleControl: FormControl = new FormControl(false);
   @HostBinding("class") className = "";
 
   //array to store items
-  public items = [];
+  public items: firestoreRec[] = [];
 
-  constructor(public db: AngularFirestore) { }
+  constructor(public db: AngularFirestore) {}
 
   async ngOnInit() {
     //referenced prof norman's notes on email
