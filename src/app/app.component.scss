@@ -1,6 +1,10 @@
+* {
+  //referenced https://stackoverflow.com/questions/30155699/bootstrap-navbar-font-change-inquiry
+}
 .navbar-header {
   display: inline-flex;
   font-size: 20px;
+  // font-family: Georgia, "Times New Roman", Times, serif;
 }
 .navbar-brand {
   color: gray;
