@@ -1,78 +1,80 @@
-
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }
-.text-container{
-    //border: 1px solid black;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    margin-right: 3%;
-    flex: 50%;
+.text-container {
+  //border: 1px solid black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-right: 3%;
+  flex: 50%;
 }
-.text-container h4{
-    text-align: left;
-    color: black;
-    font-size: 25px;
+h4 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-.text-container p{
-    text-align: left;
-    color: black;
-    font-size: 20px;
+.text-container h4 {
+  text-align: left;
+  color: black;
+  font-size: 25px;
 }
-.form-container{
-    //border: 1px solid black;
-    flex: 50%;
+.text-container p {
+  text-align: left;
+  color: black;
+  font-size: 20px;
 }
-.icon-buttons{
-    background-color: white;
-    border: none;
-    color: black;
-    padding-right: 5%;
+.form-container {
+  //border: 1px solid black;
+  flex: 50%;
 }
-i:hover{
-    color: gray;
-    background-color: white;
+.icon-buttons {
+  background-color: white;
+  border: none;
+  color: black;
+  padding-right: 5%;
+}
+i:hover {
+  color: gray;
+  background-color: white;
 }
 input {
-    display: inline-flex;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 5%;
-    background-color: rgb(242, 242, 242);
-    border-radius: 5px;
-    font-size: 16px;
-    padding-left: 10px;
+  display: inline-flex;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5%;
+  background-color: rgb(242, 242, 242);
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
 }
-textarea{
-    display: inline;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 5%;
-    background-color: rgb(242, 242, 242);
-    border-radius: 5px;
-    font-size: 16px;
-    padding-left: 10px;
+textarea {
+  display: inline;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 5%;
+  background-color: rgb(242, 242, 242);
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
 }
-.submit{
-    width: 50%;
-    align-content: center;
-    background-color: white;
+.submit {
+  width: 50%;
+  align-content: center;
+  background-color: white;
 }
-label{
-    font-size: 15px;
+label {
+  font-size: 15px;
 }
 button {
-    border-radius: 5px;
-    padding: 1rem;
-    font-size: 16px;
-    padding: 7px 30px;
-    color: black;
-    border: solid 3px transparent;
-    background-color: rgb(100,100,100);
-    box-shadow: 2px 1000px 1px #fff inset;
-  }
-  button:hover {
-    box-shadow: none;
-    color: white;
-  }
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 16px;
+  padding: 7px 30px;
+  color: black;
+  border: solid 3px transparent;
+  background-color: rgb(100, 100, 100);
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+button:hover {
+  box-shadow: none;
+  color: white;
+}
